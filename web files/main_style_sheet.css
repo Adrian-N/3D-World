@@ -1,0 +1,23 @@
+
+*{margin: 0; padding: 0;}
+
+#logo {
+  position:relative;
+  height:75px;
+  width:75px;
+  margin:10px;
+}
+
+#logo img {
+  position:absolute;
+  left:0;
+
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#logo img.top:hover {
+  opacity:0;
+}

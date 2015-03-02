@@ -1,0 +1,108 @@
+/****************************
+	#CTP: 3D Printing Project
+	#CSS FOR GLOBAL MENU
+	#Inspiration:
+	#http://www.dzyngiri.com/simple-dropdown-menu-using-css/
+****************************/
+nav{ /*Middle part of the header.*/
+	width:50%;
+	/*margin: auto;*/
+	float: left;
+	/*overflow: hidden;*/
+}
+#navigation {
+	position: relative;
+	text-align:center;
+	margin:0 auto;
+}
+#navigation li {
+	position: relative;
+	list-style: none;
+	display: inline-block;
+	padding: 5px 20px;
+}
+	/*@media only screen and (max-width : 900px) {
+		#navigation li {
+			padding: 5px 10px;
+		}
+	}*/
+	@media only screen and (max-width : 900px) {
+		#navigation li {
+			padding: 5px 5px;
+		}
+	}
+#navigation li a {
+	padding: 5px;
+	display: block;
+	font-family: 'Lato';
+	font-size: 19px;
+	color: #3b3b3b;
+	text-align: left;
+	text-decoration: none;
+}
+#navigation li .sub-nav-wrapper {
+	display: block;
+	position: absolute;
+	z-index: 30;
+	margin-left: -16px;
+}
+#navigation li .sub-nav-wrapper .sub-nav {
+	width: 150px;
+	margin-top: 4px;
+	background: #FDFDFD;
+}
+#navigation li:hover .sub-nav-wrapper {
+	display: block;
+}
+#navigation li .sub-nav-wrapper .sub-nav li {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+#navigation li .sub-nav-wrapper .sub-nav li:last-child {
+	border: none;
+}
+#navigation li .sub-nav-wrapper .sub-nav li a {
+	display: block;
+	padding: 11px 20px;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+
+/*****************************
+	#HOVERS
+*****************************/
+#navigation li:hover .main { /*Main Text*/ 
+	color:#0000FF;
+}
+#navigation li .sub-nav-wrapper .sub-nav li:hover { /*Dropdown background hover*/
+	background: #CCE6FF;
+}
+
+
+/*************************
+	#ANIMATIONS
+*************************/
+a, #navigation li .sub-nav-wrapper .sub-nav li {
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+#navigation li .sub-nav-wrapper {
+	pointer-events: none;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	top: 0;
+	transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	-webkit-transition: all 0.35s ease-in-out;
+}
+#navigation li:hover .sub-nav-wrapper {
+	pointer-events: auto;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	top: 30px;
+}

@@ -1,0 +1,115 @@
+/*
+	CSS for Mobiles
+*/
+
+/*800px*/
+@media only screen and (max-width : 800px) {
+
+	/*Search bar*/
+	#search{
+		display: none;
+	}
+
+	/*Navigation*/
+	nav{
+		width: 75%;
+		text-align: right;
+	}
+
+
+
+	/*Footer*/
+	footer{
+		/*Old*/
+		width: 100%;
+		margin-bottom: 5px;
+		text-align: center;
+
+
+		/*Reset*/
+		bottom:auto;
+		position: static;
+
+		/*New*/
+		float: left;
+		margin-top: 30px;
+	}
+}
+
+
+/*3D-Printers.php - 800px*/
+.mobSubTitle{
+	display: none;
+}
+@media only screen and (max-width : 800px) {
+	.mobSubTitle{
+		display: block;
+	}
+	.artSideLeft{
+		display: none;
+	}
+	.artSideRight{
+		width:100%;
+		max-width: 500px;
+		margin: auto;
+		text-align: left;
+		/*background-color: grey;*/
+	}
+	.artBox{
+		width: 100%;
+		/*background-color: green;*/
+		/*Reset*/
+		max-width: none;
+		margin: 0;
+	}
+	.artSide{
+
+			/*Reset*/
+			float: none;
+			overflow: visible;
+		}
+}
+
+
+@media only screen and (max-width : 600px) {
+	.content h4{
+		font-size: 22px;
+
+	}
+}
+
+
+
+/************
+	#Browse_Printers.php
+*************/
+@media only screen and (max-width : 650px) {
+	.browsingBox{
+
+			/*Reset*/
+			width: 320px !important;
+			max-width: none !important;
+			text-align: center;
+			margin: auto !important;
+
+			overflow: hidden;
+		}
+	.printer{
+			width: 150px;
+			margin: 0 5px;
+			/*background-color: #000;*/
+			float: left;
+			overflow: hidden;
+			text-align: center;
+
+		}
+
+}
+@media only screen and (max-width : 400px) {
+	.browsingBox{
+
+			/*Reset*/
+			width: 170px !important;
+
+		}
+}
