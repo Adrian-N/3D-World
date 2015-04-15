@@ -1,3 +1,20 @@
+<?php
+	//script to find out what data get from db
+	$Printers = false; 
+	$Materials = false;
+	if (isset($_GET['Printer_ID'])) {
+		$Printers = true;
+		$PRINTER_ID = $_GET['Printer_ID'];
+	}elseif (isset($_GET['Material_ID'])) {
+		$Materials = true;
+		$MATERIAL_ID = $_GET['Material_ID'];
+	}else{
+		header("location: sorry.php?error=dbData002");
+	}
+
+	//get conn data
+	require("php/data.php");	
+?>
 <!DOCTYPE html> <!--html 5-->
 <html>
 	<head>
@@ -8,14 +25,13 @@
 		<link rel="stylesheet" type="text/css" href="css/nav.css"> <!-- Menu Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/logo.css"> <!-- Logo Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/mobileNav.css"> <!-- Mobile Navigation -->
+        <link rel="stylesheet" type="text/css" href="css/searchBar.css"> <!-- Google Custom Search Engine -->
 
-		<!--Fonts-->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
         <!-- Scripts -->
         <script src="scripts/jquery-1.11.1.min.js"></script>
 
-		<title>3D World - Printers, Help, Tutorials</title> 
+		<title>3D Printing World &#124; Tutorials, Resources, Help - All About 3D Printing</title> 
 		<meta name="description" content="All About 3D Printing">
 		<meta name="keywords" content="3D, Tutorials, Modeling, Printing">
 		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" /><!--Viewport scale for mobile devices.-->
@@ -66,32 +82,47 @@
 		<header>
             <div id="logo">
 				<a href="index.php">
-					<img class="bottom" src="pic/home.svg" alt="home" />
-                    <img class="top" src="pic/logo.svg" alt="logo" />
+					<img class="bottom" src="img/logo/home.svg" alt="home" />
+                    <img class="top" src="img/logo/logo.svg" alt="logo" />
 				</a>
             </div>
 			<?php
                 include('menu.php');
             ?>
             <form id="search">
-                <input class="search" type="text" placeholder="Search...">
-                <input class="button" type="button" value="Search">
+                <?php
+                include('searchBar.php');
+            	?>
             </form>	
 		</header>
         <section class="content">
         	<section class="printersTemplate">
         			<?php
-        				require("php/show_printer.php");
+        				//get printer data
+						if ($Printers == true) {
+							require("php/show_printer.php");
+						}
+						//get material data
+						if ($Materials == true) {
+							require("php/show_material.php");
+						}
         			?>
-        		<a href="Browse_Printers.php" class="myButton">Back</a>	
-        	</section>
-            
-
-            
+        			<?php
+        				//get printer data
+						if ($Printers == true) {
+							echo "<a href='Browse_Printers.php' class='myButton'>Back</a>";
+						}
+						//get material data
+						if ($Materials == true) {
+							echo "<a href='Browse_Materials.php' class='myButton'>Back</a>";
+						}
+        			?>
+        		<!-- <a href="Browse_Materials.php" class="myButton">Back</a>	 -->
+        	</section> 
         </section>
         
         <?php
-            include('footer.php');
+            include('altFooter.php');
         ?>
 	</body> <!-- End of body content. -->
 </html> <!--By Adrian Nowak-->

@@ -31,26 +31,7 @@
 			padding: 3px;
 			margin-bottom: 5px;
 		}
-		/*Footer*/
-	footer{
-		/*Old*/
-		width: 100%;
-		margin-bottom: 5px;
-		text-align: center;
-
-
-		/*Reset*/
-		bottom:auto;
-		position: static;
-
-		/*New*/
-		float: left;
-		margin-top: 0px;
-	}
-	.bigInput{
-
-
-	}
+		
 	</style>
 
 	</head>
@@ -125,13 +106,13 @@
 					}
 				?>
 			</figure> 
+			<br />
+        	<br />	
 		</header>
-        <article class="homeEffect">
-            
-        </article>
+
         
         <?php
-            include('../footer.php');
+            include('../altFooter.php');
         ?>
 	</body> <!-- End of body content. -->
 </html> <!--By Adrian Nowak-->

@@ -30,7 +30,7 @@ if(mysqli_connect_errno())
 
 			echo "<div class='printer'>";
 			echo "<a href='3D_Printer.php?Printer_ID=". $row["Printer_ID"] ."'>";
-			echo "<img width='120px' alt='image of printer' src='printers/". $row["Printer_IMG"] .".jpg'><br />";
+			echo "<img width='120px' alt='image of printer' src='img/printers/". $row["Printer_IMG"] .".jpg'><br />";
 			echo "<h3>" .  $row["Printer_Name"] . "</h3>";
 			echo "<p>" .  $row["Printer_Price"] . "</p>";
 			echo "</a></div>";

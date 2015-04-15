@@ -1,9 +1,10 @@
 <?php
-	//get ID
-	$PRINTER_ID = $_GET['Printer_ID'];
-
-	// conn data
-	require("data.php");
+	// $url="index.php";
+$url="sorry.php?error=P00001";
+	function redirect($url){
+    	$string = '<script type="text/javascript"> window.location = "' . $url . '" </script>';
+    	echo $string;
+	}//redirect($url);
 
 	//connect
 	$conn = mysqli_connect($host, $user, $password, $database);
@@ -23,6 +24,12 @@ if(mysqli_connect_errno())
 
 		//fetch
 		$row = mysqli_fetch_array($data);
+
+		//bulletproof
+		$quickCheck = $row["Printer_Name"];
+		if ($quickCheck == "") {
+			redirect($url);
+		}
 
 		//output
 		echo "<article class='TemplateSide'>";
@@ -55,7 +62,7 @@ if(mysqli_connect_errno())
 
         				<!-- Image -->
         				<?php
-        				echo "<img src='printers/". $row["Printer_IMG"] .".jpg' alt='Printer Image'>";
+        				echo "<img src='img/printers/". $row["Printer_IMG"] .".jpg' alt='Printer'>";
         				
         				?>
 

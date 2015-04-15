@@ -1,0 +1,25 @@
+.listHolder{
+	/*border:solid 1px #000;*/
+
+	margin: auto;
+	width: 100%;
+	max-width: 600px;
+	overflow: hidden;
+	text-align: left;
+}
+.listHolder p{
+	font-family: arial;
+	font-weight: normal;
+	padding: 3px;
+	font-size: 14px;	
+	
+}
+.listHolder a{
+	color: #191919;
+}
+.listHolder a:hover{
+	text-decoration: none;
+}
+.myButton {
+	margin-top: 10px;
+}

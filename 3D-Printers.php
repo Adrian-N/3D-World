@@ -9,14 +9,12 @@
         <link rel="stylesheet" type="text/css" href="css/logo.css"> <!-- Logo Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/mobile.css"> <!-- Logo Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/mobileNav.css"> <!-- Mobile Navigation -->
-
-		<!--Fonts-->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/searchBar.css"> <!-- Google Custom Search Engine -->
 
         <!-- Scripts -->
         <script src="scripts/jquery-1.11.1.min.js"></script>
 
-		<title>3D World - Printers, Help, Tutorials</title> 
+		<title>3D Printing World &#124; Tutorials, Resources, Help - All About 3D Printing</title> 
 		<meta name="description" content="All About 3D Printing">
 		<meta name="keywords" content="3D, Tutorials, Modeling, Printing">
 		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" /><!--Viewport scale for mobile devices.-->
@@ -31,16 +29,17 @@
 		<header>
             <div id="logo">
 				<a href="index.php">
-					<img class="bottom" src="pic/home.svg" alt="home" />
-                    <img class="top" src="pic/logo.svg" alt="logo" />
+					<img class="bottom" src="img/logo/home.svg" alt="home" />
+                    <img class="top" src="img/logo/logo.svg" alt="logo" />
 				</a>
             </div>
 			<?php
                 include('menu.php');
             ?>
             <form id="search">
-                <input class="search" type="text" placeholder="Search...">
-                <input class="button" type="button" value="Search">
+                <?php
+                include('searchBar.php');
+            	?>
             </form>	
 		</header>
         <section class="content">

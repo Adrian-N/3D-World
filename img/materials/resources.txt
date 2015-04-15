@@ -1,0 +1,10 @@
+#Rsources
+
+#PLA img:
+#http://airwolf3d.com/2013/06/10/materials-and-filaments/3d-printer-materials-pla/
+
+#ABS img:
+#http://airwolf3d.com/2008/05/10/teardrop-gear/
+
+#nylon img
+#http://airwolf3d.com/wp-content/uploads/2014/08/nylon-vase.jpg

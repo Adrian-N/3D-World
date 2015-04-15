@@ -1,7 +1,22 @@
-<!DOCTYPE html> <!--html 5-->
+<!DOCTYPE html> 
+<!-- 
+	#Author: Adrian Nowak (12018991)
+	#Project: CTP - 3D Printing World
+ -->
 <html>
 	<head>
+		<!-- Meta -->
 		<meta charset="UTF-8">
+		<meta name="description" content="All About 3D Printing">
+		<meta name="keywords" content="3D, Tutorials, Modeling, Printing">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" /><!--Viewport scale for mobile devices.-->
+
+		<!-- Title -->
+		<title>3D Printing World &#124; Tutorials, Resources, Help - All About 3D Printing</title> 
+
+		<!-- Icons -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="css/main.css"> <!-- Main Style Sheet. -->
@@ -10,17 +25,11 @@
         <link rel="stylesheet" type="text/css" href="css/logo.css"> <!-- Logo Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/mobile.css"> <!-- Mobile Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/mobileNav.css"> <!-- Mobile Navigation -->
-
-		<!--Fonts-->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/homepageGraphic.css"> <!-- Home Graphic -->
+        <link rel="stylesheet" type="text/css" href="css/searchBar.css"> <!-- Google Custom Search Engine -->
 
         <!-- Scripts -->
         <script src="scripts/jquery-1.11.1.min.js"></script>
-
-		<title>3D World - Printers, Help, Tutorials</title> 
-		<meta name="description" content="All About 3D Printing">
-		<meta name="keywords" content="3D, Tutorials, Modeling, Printing">
-		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" /><!--Viewport scale for mobile devices.-->
 
 		<!--Ensuring HTML5 backwards compatibility with old versions of Internet Explorer-->
 		<!--[if lt IE 9]>
@@ -32,16 +41,17 @@
 		<header>
             <div id="logo">
 				<a href="index.php">
-					<img class="bottom" src="pic/home.svg" alt="home" />
-                    <img class="top" src="pic/logo.svg" alt="logo" />
+					<img class="bottom" src="img/logo/home.svg" alt="home" />
+                    <img class="top" src="img/logo/logo.svg" alt="logo" />
 				</a>
             </div>
 			<?php
                 include('menu.php');
             ?>
             <form id="search">
-                <input class="search" type="text" placeholder="Search...">
-                <input class="button" type="button" value="Search">
+            	<?php
+                include('searchBar.php');
+            	?>
             </form>	
 		</header>
         <article class="homeEffect">
@@ -69,8 +79,11 @@
 				</div>
 			</a>
 		</figure>
+		<figure>
+			<img id="drawingCubes" src="img/other/cubes.png">
+		</figure>
         <?php
             include('footer.php');
         ?>
-	</body> <!-- End of body content. -->
-</html> <!--By Adrian Nowak-->
+	</body>
+</html> 

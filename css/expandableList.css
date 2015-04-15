@@ -1,15 +1,15 @@
-/*  CSS Document                             */
-/*  Written by Chris Converse for Lynda.com  */
-
-
+/*
+	#Author: Adrian Nowak;
+	#Project: 3D Printing World;
+	#Notes: CSS for Expandable List;
+	#Resources: http://www.lynda.com/jQuery-tutorials/Create-Expandable-FAQ-Listing-jQuery/87090-2.html;
+*/
 
 .tutorialBox {
 	margin: 20px;
 	padding: 0px 0px 5px 0px;
 	width: 100%;
 	max-width: 700px;
-	/*background: #fff;*/
-	/*background: grey;*/
 	margin: auto;
 	overflow: hidden;
 }
@@ -17,8 +17,6 @@
 .tutorialArticle {
 	margin: 0 10px 20px 10px;
 	padding: 10px;
-	/*position: relative;*/
-	/*background: #fff;*/
 	border: solid 2px #0000FF;
 }
 
@@ -47,8 +45,10 @@
 	font-family: arial; 
 	font-weight: normal; 
 	text-align: left;
- }/*
-
-.faq .letter_q { width: 40px; height: 50px; position: absolute; top: 20px; left: 25px; background: url(../images/q.png) 0px 0px; }
-.faq .letter_a { width: 43px; height: 40px; position: absolute; top: 42px; left: 23px; background: url(../images/a.png) 0px 0px; display: none;}
-
+ }
+ .listHolder{
+	margin: auto;
+	width: 100%;
+	max-width: 900px;
+	overflow: hidden;
+}

@@ -1,0 +1,13 @@
+.gsc-search-box-tools .gsc-search-box .gsc-input{
+padding-right: 0px !important;
+}
+.gsc-control-cse{
+	width: 220px !important;
+	padding: 0px !important;
+	text-align: right !important;
+	float: right;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
+	background-color: #207CCA !important;
+	border: none 0px !important;
+}

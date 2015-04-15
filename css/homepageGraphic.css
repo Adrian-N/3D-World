@@ -1,0 +1,117 @@
+/*
+	#Author: Adrian Nowak;
+	#Notes: additional css for homepage (additional graphic);
+	#Resources:
+	#http://www.w3schools.com/css/css3_transitions.asp
+	#http://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load
+*/
+
+
+/*Main*/
+#drawingCubes{
+	width: 500px;
+	position: relative;
+	top:-50px;
+	left: 300px;
+
+    -webkit-transition-duration: 5s; /* Safari */
+    /*-webkit-transition-delay: 2s; /* Safari */*/
+
+    /*transition-property: width;*/
+    transition-duration: 2s;
+    /*transition-delay: 2s;*/
+
+    animation: fadein 5s;
+	-moz-animation: fadein 5s; /* Firefox */
+	-webkit-animation: fadein 5s; /* Safari and Chrome */
+	-o-animation: fadein 5s; /* Opera */
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*Different settings for different screen sizes*/
+
+@media (min-width: 1851px) and (max-width: 2200px){
+	#drawingCubes{
+		width: 500px;
+		top:-50px;
+		left: 300px;
+		}
+}
+
+@media (min-width: 1651px) and (max-width: 1850px){
+	#drawingCubes{
+		width: 450px;
+		top:-50px;
+		left: 230px;
+		}
+}
+
+@media (min-width: 1451px) and (max-width: 1650px){
+	#drawingCubes{
+		width: 450px;
+		top:-50px;
+		left: 130px;
+	}
+}
+@media (min-width: 1251px) and (max-width: 1450px){
+	#drawingCubes{
+		width: 400px;
+		top:-50px;
+		left: 30px;
+	}
+}
+@media (min-width: 1051px) and (max-width: 1250px){
+	#drawingCubes{
+		width: 400px;
+		top:-50px;
+		left: 0px;
+	}
+}
+@media (min-width: 901px) and (max-width: 1050px){
+	#drawingCubes{
+		width: 350px;
+		top:-50px;
+		left: 0px;
+	}
+}
+
+
+/*Mobile*/
+@media only screen and (max-width : 900px) {
+	#drawingCubes{
+		display: none;
+	}
+}

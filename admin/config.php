@@ -26,6 +26,21 @@
 		<script src="scripts/html5shiv.min.js"></script>
 		<![endif]-->
 
+		<style type="text/css">
+		#admin a{
+			color:black;
+			width: 200px;
+			height: 30px;
+			display: inline-block;
+			border: solid 1px blue;
+			text-decoration: none;
+			padding: 3px;
+		}
+		#admin a:hover{
+			background-color: #E6E6FF;
+		}
+		</style>
+
 	</head>
 	<body> 
 		<header>
@@ -75,10 +90,11 @@
 								//  ****** BODY GOES HERE *******
 
 								echo '<p>Hello ' . $username . ', what would you like to do today?</p><br />';
-								echo '<p><a href=addPrinter.php> Add printer to DB</a></p>';
-								echo '<p><a href=deletePrinter.php> Delete printer from DB</a></p>';
-								echo '<p><a href=sqlBackup.php> Create MySQL backup</a></p>';
-								echo '<p><a href=logout.php> Logout</a></p>';
+								echo '<p><a href="addPrinter.php"> Add printer to DB</a></p>';
+								echo '<p><a href="deletePrinter.php"> Delete printer from DB</a></p>';
+								echo '<p><a href="sqlBackup.php"> Create MySQL backup</a></p>';
+								echo '<p><a href="errorCodes.php"> Error Codes</a></p>';
+								echo '<p><a href="logout.php"> Logout</a></p>';
 							} 
 						} 
  					} 

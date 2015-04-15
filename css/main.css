@@ -4,6 +4,17 @@ body{
 	background: #F8F8F8; /*Light Grey*/
 }
 
+/*************
+	#Fonts
+***************/
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	src: url(fonts/lato.woff);
+}
+/*Fonts - END*/
+
 /****************
  #ERRORS
  ************/
@@ -96,7 +107,21 @@ footer a{
 footer a:hover{
 	color: #B2B2B2;
 }
+/*Alt Footer*/
+#altFooter{
+	/*Old*/
+	width: 100%;
+	margin-bottom: 5px;
+	text-align: center;
 
+	/*Reset*/
+	bottom:auto;
+	position: static;
+
+	/*New*/
+	float: left;
+	margin-top: 0px;
+}
 /******************
 	# 3D Printers
 ******************/

@@ -1,0 +1,28 @@
+.listHolder{
+	/*border:solid 1px #000;*/
+
+	margin: auto;
+	width: 100%;
+	max-width: 450px;
+	overflow: hidden;
+	font-family: arial;
+	font-weight: normal;
+}
+#result{
+	font-weight: normal;
+	font-family: "Lato", arial;
+	font-size: 35px;
+	margin-top: 30px;
+	display: block
+}
+.listHolder h5{
+	font-weight: normal;
+	font-family: arial;
+	font-size: 17px;
+	margin-top: 30px;
+	display: block;
+
+}
+.myButton{
+	padding: 10px 13px 10px 13px;
+}

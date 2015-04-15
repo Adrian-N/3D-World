@@ -1,3 +1,8 @@
+<?php
+include 'functions.php';
+cookieExist();
+$localhost = hosting();
+?>
 <!DOCTYPE html> <!--html 5-->
 <html>
 	<head>
@@ -71,29 +76,38 @@
 							if ($pass != $info['password']) { 			
 								redirect($url); 
 							}	 
-							else { 
-								//  ****** BODY GOES HERE *******
+							else {
+								/*MySQL Backup
+									#Resources:
+									#http://dev.mysql.com/doc/refman/4.1/en/mysqldump.html
+									#http://php.net/manual/en/function.exec.php
+								*/
 								
 								// File Name
 								$filename = "backup" . date("Ymdhisa");
+
+								//Backup path
 								$path = "backup";
 
-								$command = 'c:\xampp\mysql\bin\mysqldump --opt -u '.$user.' -p'.$password.' '.$database.' > '.$path.'/'.$filename.'.sql';
+								if ($localhost == false) {
+									//making external command (call to mysqldump)(external host)
+									$command = 'mysqldump --opt -u '.$user.' -p'.$password.' '.$database.' > '.$path.'/'.$filename.'.sql';
+								}else{
+									//making external command (call to mysqldump)(localhost)
+									$command = 'c:\xampp\mysql\bin\mysqldump --opt -u '.$user.' -p'.$password.' '.$database.' > '.$path.'/'.$filename.'.sql';
+								}
+
+								//Execute an external program
+								//exec() will not return output to the PHP script 
 								exec($command);
 
-								//output
+								//html output
 								echo "<br /><p>MySQL backup complete.</p>";
 								echo "<p>File name: " . $filename .".sql</p>";
-								echo "<p>Path:" . $path . "</p>";
 								echo "<p>Current date and time: " . date("Y/m/d h:i:sa") . "</p>";
+								echo "<p>Download: <a href='backup/".$filename.".sql'>Link</a></p>";
 								echo "<p><a href='config.php'>Back</a></p>";
 								
-
-								
-								
-
-
-
 
 							} 
 						} 

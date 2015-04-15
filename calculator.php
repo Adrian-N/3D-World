@@ -4,19 +4,21 @@
 		<meta charset="UTF-8">
 
 		<!--CSS-->
-		<link rel="stylesheet" type="text/css" href="css/main.css"> <!-- Main Style Sheet. -->
 		<link rel="stylesheet" type="text/css" href="css/nav.css"> <!-- Menu Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/logo.css"> <!-- Logo Stylesheet -->
-        <link rel="stylesheet" type="text/css" href="css/mobile.css"> <!-- Logo Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/mobile.css"> <!-- mobile Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/mobileNav.css"> <!-- Mobile Navigation -->
 
-		<!--Fonts-->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <!-- Calculator CSS -->
+        <link rel="stylesheet" type="text/css" href="css/calculator/calculatorMain.css"> <!-- Calculator Input CSS -->
+        <link rel="stylesheet" type="text/css" href="css/calculator/calculatorInput.css"> <!-- Calculator Input CSS -->
+        <link rel="stylesheet" type="text/css" href="css/calculator/calculatorTooltip.css"> <!-- Calculator Tooltip CSS -->
+        <link rel="stylesheet" type="text/css" href="css/searchBar.css"> <!-- Google Custom Search Engine -->
 
         <!-- Scripts -->
         <script src="scripts/jquery-1.11.1.min.js"></script>
 
-		<title>3D World - Printers, Help, Tutorials</title> 
+		<title>3D Printing World &#124; Tutorials, Resources, Help - All About 3D Printing</title>
 		<meta name="description" content="All About 3D Printing">
 		<meta name="keywords" content="3D, Tutorials, Modeling, Printing">
 		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" /><!--Viewport scale for mobile devices.-->
@@ -25,77 +27,22 @@
 		<!--[if lt IE 9]>
 		<script src="scripts/html5shiv.min.js"></script>
 		<![endif]-->
-		<style type="text/css">
-		.listHolder{
-			/*border:solid 1px #000;*/
-
-			margin: auto;
-			width: 100%;
-			max-width: 450px;
-			overflow: hidden;
-			font-family: arial;
-		}
-		.listHolder h5{
-			font-weight: normal;
-			font-family: arial;
-			font-size: 17px;
-			margin-top: 30px;
-			display: inline;
-
-		}
-		.small{
-			font-size: 12px !important;
-		}
-		select{
-			width:110px;
-			height: 35px;
-			margin: 5px;
-			display: inline;
-			/*float: right;*/
-		}
-		.listTop{
-			width: 75px;
-		}
-		option{
-			padding:2px;
-		}
-		input{
-			width:60px;
-			padding: 5px;
-			margin: 5px;
-			display: inline;
-
-		}
-		#calc{
-			width: 100px;
-			background-color: #0066FF;
-			border: 0px;
-			color: #fff;
-			font-size: 15px;
-		}
-		.smallOption{
-			padding: 0;
-			margin: 0;
-			height: 16px;
-			font-size: 10px;
-		}
-		</style>
-
 	</head>
 	<body> 
 		<header>
             <div id="logo">
 				<a href="index.php">
-					<img class="bottom" src="pic/home.svg" alt="home" />
-                    <img class="top" src="pic/logo.svg" alt="logo" />
+					<img class="bottom" src="img/logo/home.svg" alt="home" />
+                    <img class="top" src="img/logo/logo.svg" alt="logo" />
 				</a>
             </div>
 			<?php
                 include('menu.php');
             ?>
             <form id="search">
-                <input class="search" type="text" placeholder="Search...">
-                <input class="button" type="button" value="Search">
+                <?php
+                include('searchBar.php');
+                ?>
             </form>	
 		</header>
         <section class="content">
@@ -117,9 +64,21 @@
 				<option value="96">4 days</option>
 				<option value="120">5 days</option>
 				<option value="144">6 days</option>
-				</select> <br />
+				</select> 
+				<a class="tooltips" href="tutorial_01.php" >
+            	<img src="img/other/info.png" alt="Website Information" />
+            	<span>Find out exact time from modelling software!<br />Click here for more info.</span>
+            </a>
+
+				<br />
             	<h5>Estimated weight of finished 3D model is</h5>
-            	 <input name="weight" type="number" required><h5>grams.</h5><br />
+            	 <input name="weight" type="number" required><h5>grams.
+            	 <a class="tooltips" href="tutorial_01.php">
+            	<img src="img/other/info.png" alt="Website Information" />
+            	<span>Find out weight from modelling software!<br />Click here for more info.</span>
+            </a>
+
+            	 </h5><br />
             	<h5>Material </h5>
             	<select name="materialCost">
             		<option value="50">PLA</option>
@@ -154,6 +113,7 @@
             		<br />
             	 <input id="calc" type="submit" value="Calculate">
             	</form>
+            	
             </article>
            	
 

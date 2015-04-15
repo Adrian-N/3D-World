@@ -1,0 +1,160 @@
+*{margin: 0;padding: 0;}/*Quick Format*/
+
+body{
+	background: #F8F8F8; /*Light Grey*/
+}
+
+/*************
+	#Fonts
+***************/
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	src: url(../fonts/lato.woff);
+}
+/*Fonts - END*/
+
+
+/****************************
+	#HOMEPAGE
+****************************/
+header{
+	width:100%;
+	float:left;
+}
+
+
+/*Search input*/
+
+#search{ /*Right part of the header*/
+	width:25%;
+
+	float: left;
+	overflow: hidden;
+
+	text-align: right;
+	margin-top: 10px;
+}
+	.search{
+		padding: 5px 10px;
+		background:#fff;
+		border: 1px solid #dbdbdb;
+		font-size: 10px;
+		width: 120px;
+	}
+	.button{
+		position: relative; /*We want the button to be next to search box with no gap.*/
+		padding: 5px 5px;
+		/*padding: 3px 5px 2px 5px;*/
+		left:-8px;
+		border:1px solid #dbdbdb;
+		background-color: #207cca;
+		color:#fafafa;
+		font-size: 10px;
+	}
+	.button:hover {
+		background-color: #4D94FF;
+		/*border:2px solid #4D94FF;*/
+		color: #fff;
+	}
+	@media only screen and (max-width : 900px) {
+		.search{
+			width: 60px;
+		}
+	}
+		
+.homeEffect{
+	margin-top: 200px;
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+	float: left;
+}
+	#homepageText{
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		font-size: 50px;
+		letter-spacing: 3px;
+	}
+
+/**********
+	#FOOTER
+*/
+footer{
+	width: 100%;
+	margin-bottom: 5px;
+	text-align: center;
+	bottom:0;
+	position:absolute;
+}
+footer p{
+	font-family: arial;
+	font-size: 12px;
+}
+footer a{
+	color: #000;
+	text-decoration: none;
+}
+footer a:hover{
+	color: #B2B2B2;
+}
+/*Alt Footer*/
+#altFooter{
+	/*Old*/
+	width: 100%;
+	margin-bottom: 5px;
+	text-align: center;
+
+	/*Reset*/
+	bottom:auto;
+	position: static;
+
+	/*New*/
+	float: left;
+	margin-top: 0px;
+}
+/******************
+	# Main Body Structure
+******************/
+.content{
+	margin-top: 50px;
+	text-align: center;
+	/*overflow: hidden;*/
+	width: 100%;
+	float: left;
+	/*background-color: grey;*/
+}
+	.content h4{
+		font-family: 'Lato';
+		font-weight: 400;
+		font-size: 40px;
+		letter-spacing: 3px;
+		margin-bottom: 20px;
+	}
+	.artBox{
+		width: 100%;
+		max-width: 600px;
+		margin: auto;
+	}
+/*Button - Browse 3D Printers*/
+.middleButton{ /*DIV*/
+	width: 100%;
+	text-align: center;
+}
+.myButton {
+	margin-top: 50px;
+	background-color:transparent;
+	border:2px solid #0066FF;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background: #CCE6FF;
+  	text-decoration: none;
+}
