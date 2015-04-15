@@ -6,6 +6,3 @@ About CTP - Final Year Creative Technologies Project is the largest solo piece o
 
 About 3D Printing World - Help, resources, tutorials and more for 3D printing. Connecting 3D printing and online services together!  
 
-Live demo (v0.3): <a target="_blank" href="http://www.adriannowak.net/ctp/">http://www.adriannowak.net/ctp/</a>
-
-HTML5, CSS3, PHP, MySQL, 
